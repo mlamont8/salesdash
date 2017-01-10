@@ -20,13 +20,16 @@
     <body>
 
  <!--Navbar  -->
-     <nav class="navbar navbar-inverse">
+     <nav class="navbar navbar-default">
          <div class="container-fluid">
+                <div class="navbar-brand bars">
+                <i class="fa fa-bars fa-lg" id="menu-toggle"></i>                
+                 </div>
              <div class="navbar-header">
-<!--                  <div class="navbar-brand">
-                     <a href="#">SalesDash<a/>
-                 </div> -->
-                 <button class="btn btn-success" id="menu-toggle">Toggle Menu</button>
+                  <div class="navbar-brand">
+                     SalesDash
+                 </div>
+                 
 
              </div>
 
@@ -36,11 +39,13 @@
  <div id="wrapper">
     <!-- Sidebar -->
         <div id="sidebar-wrapper">
+            <div class="sidebar-name">NAME</div>
             <ul class="sidebar-nav">
-                <li><a href="#">First</a></li>
-                <li><a href="#">Second</a></li>
-                <li><a href="#">Third</a></li>
-
+                <li><a href="#"><i class="fa fa-tachometer fa-lg"></i>Dashboard</a></li>
+                <li><a href="#">
+<i class="fa fa-usd fa-lg"></i>Enter Sales</a></li>
+                <li><a href="#"> <i class="fa fa-user fa-lg"></i>Profile</a></li>
+                <li><a href="#"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
             </ul>
 
         </div>
