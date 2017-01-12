@@ -16,9 +16,14 @@ class CreateSalesTable extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
-            $table->string('company');
-            $table->decimal('value',9,2);
-            $table->decimal('commission',9,2);
+            $table->date('date_sold');
+            $table->string('product');
+            $table->string('cust_name');
+            $table->string('address');
+            $table->string('phone');
+            $table->string('sales_method');
+            $table->decimal('commission', 4, 2);
+
         });
     }
 
