@@ -15,10 +15,13 @@ class CreateSalesTable extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('user_id')->unsigned()->index();
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
             $table->date('date_sold');
             $table->string('product');
-            $table->string('cust_name');
+            $table->string('first_name');
+            $table->string('last_name');
             $table->string('address');
             $table->string('phone');
             $table->string('sales_method');

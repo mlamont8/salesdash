@@ -22,3 +22,21 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Sales::class, function (Faker\Generator $faker) {
+   
+
+    return [
+     
+        'user_id' => $faker->numberBetween ($min=1, $max=10),
+        'date_sold' => $faker->dateTimeBetween ($startDate='-2 years', $endDate='now',$timezone = date_default_timezone_get()),
+		'product' => $faker->randomElement($array = array ('SUPA101','DETA200','PURA100')),       
+		'first_name' => $faker->firstName,       
+		'last_name' => $faker->lastName,       
+		'address' => $faker->address,       
+		'phone' => $faker->phoneNumber,       
+		'sales_method' => $faker->randomElement($array= array ('Phone','In Person', 'Internet')),       
+		'commission' => $faker->randomElement($array= array (32.00,59.00,61.00,85.00)),
+
+    ];
+});
