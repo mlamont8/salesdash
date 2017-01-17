@@ -29,9 +29,23 @@
                   <div class="navbar-brand">
                      SalesDash
                  </div>
-                 
+              
+               
+
+              </div>  
+                 @if(Auth::user())
+                <ul class="nav navbar-nav navbar-right">
+                     <li>{{Auth::user()->name}}</li>
+                
+                 </ul>
+
+                 @endif
+             
+
 
              </div>
+
+
 
          </div>
      </nav>

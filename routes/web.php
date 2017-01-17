@@ -11,10 +11,18 @@
 |
 */
 
-Route::get('/', function () {
-    return view('dash');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::group(['middleware'=>'auth'],function(){
+	Route::get('/', 'HomeController@index');
+
+	//->name('dashboard.index');
+
+
+});
+
+
+
+
+
+// Route::get('/home', 'HomeController@index');

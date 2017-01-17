@@ -11,7 +11,12 @@
                </div>
             <div class="row">
               <div class="dash-content">
-                <div class="col-md-4">Dash 1</div>
+                <div class="col-md-4">
+                   @foreach($sales as $sale)
+                    {{$sale->user_id}}
+                    {{$sale->name}}
+                  @endforeach 
+                </div>
                 <div class="col-md-4">Dash 2</div>
                 <div class="col-md-4">Dash 3</div>
               </div>
