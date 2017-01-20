@@ -7688,6 +7688,12 @@ button.close {
   }
 }
 
+/* Colors */
+#main-content {
+  color: #212121;
+  background-color: #C5CAE9;
+}
+
 /* Sidebar */
 #sidebar-wrapper {
   z-index: 1;
@@ -7698,8 +7704,7 @@ button.close {
   width: 0;
   height: 100%;
   overflow-y: hidden;
-  background-color: #2e353d;
-  color: #e1ffff;
+  background-color: #303F9F;
 }
 
 /* Main Content */
@@ -7707,7 +7712,6 @@ button.close {
   width: 100%;
   position: absolute;
   padding: 15px;
-  border: 5px solid green;
 }
 
 /* change width of sidebar to display */
@@ -7733,7 +7737,6 @@ button.close {
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
-  color: #ddd;
 }
 
 .sidebar-name {
@@ -7752,6 +7755,19 @@ button.close {
   background-color: #4f5b69;
   -webkit-transition: all 2s ease;
   transition: all 2s ease;
+}
+
+.welcome {
+  height: 100px;
+  font-size: 2em;
+  border: 20px 0 20px 0;
+  background-color: #ffffff;
+}
+
+.navbar {
+  background-color: #3F51B5;
+  color: #ffffff !important;
+  margin-bottom: 0px;
 }
 
 /*# sourceMappingURL=app.css.map */

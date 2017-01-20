@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Auth;
 
 use App\Sales;
 
+use Charts;
+
 class HomeController extends Controller
 {
     /**
@@ -38,7 +40,34 @@ class HomeController extends Controller
 
         $all = Sales::all();
 
-        return view('dash',compact('sales'));
+        /*Laravel Charts*/
+         $chart1 = Charts::database($sales,'bar', 'highcharts')
+         
+            ->responsive(true)
+            
+            ->groupBy('date_sold');
+
+         $chart2 = Charts::database($sales,'bar', 'highcharts')
+         
+            ->responsive(false)
+            ->width(0)
+            ->groupBy('date_sold');
+
+         $chart3 = Charts::database($sales,'pie', 'highcharts')
+         
+            ->responsive(false)
+            ->width(0)
+            ->groupBy('product');
+
+            $chart=[$chart1,$chart2,$chart3];
+
+
+        return view('dash',['chart' => $chart]);
+
+  
+
+       // return view('dash',compact('sales'));
+
 
     }
 }

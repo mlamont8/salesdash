@@ -3,25 +3,38 @@
 
 
     @section('content')    
-        <div class="container-fluid">
-           <div class="row">
-               <div class="dash-header col-lg-12">            
-                    <h3><i class="fa fa-tachometer" aria-hidden="true"></i> Dashboard</h3>
-                                 
-               </div>
-            <div class="row">
-              <div class="dash-content">
-                <div class="col-md-4">
-                   @foreach($sales as $sale)
-                    {{$sale->user_id}}
-                    {{$sale->name}}
-                  @endforeach 
+        <div class="container" id="main-content">
+           
+              <div class="row">
+                <div class="welcome col-lg-6">
+                  
+                <p>Welcome Back {{Auth::user()->name}} !</p>
                 </div>
-                <div class="col-md-4">Dash 2</div>
-                <div class="col-md-4">Dash 3</div>
+              </div>
+
+              <div class="dash-content">
+             <!-- Row 1 -->
+                  <div class="row">
+                <div class="col-md-6">
+                  <!-- This months sales -->
+                    {!! $chart[0]->render() !!}
+                </div>
+                <div class="col-md-6">
+                    {!! $chart[1]->render() !!}
+                 </div>
+               </div>
+            <!-- Row 2 -->
+
+               <div class="row">
+                <div class="col-md-6">
+                  {!! $chart[2]->render() !!}
+                </div>
+                  <div class="col-md-6">
+                  {!! $chart[2]->render() !!}
+                </div>
               </div>
             </div>
-           </div>
+           
         </div>
 
      @endsection   
