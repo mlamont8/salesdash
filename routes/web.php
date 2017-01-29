@@ -15,8 +15,10 @@ Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
 	Route::get('/', 'HomeController@index');
+	Route::post('/', 'HomeController@store');
+	Route::get('/create', 'HomeController@create');
 
-	//->name('dashboard.index');
+	
 
 
 });

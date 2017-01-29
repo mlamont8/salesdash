@@ -29,7 +29,7 @@ $factory->define(App\Sales::class, function (Faker\Generator $faker) {
     return [
      
         'user_id' => $faker->numberBetween ($min=1, $max=10),
-        'date_sold' => $faker->dateTimeBetween ($startDate='-2 years', $endDate='now',$timezone = date_default_timezone_get()),
+        'date_sold' => $faker->dateTimeBetween ($startDate='-3 years', $endDate='now',$timezone = date_default_timezone_get()),
 		'product' => $faker->randomElement($array = array ('SUPA101','DETA200','PURA100')),       
 		'first_name' => $faker->firstName,       
 		'last_name' => $faker->lastName,       
