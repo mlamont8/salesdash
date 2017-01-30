@@ -14,9 +14,12 @@
 Auth::routes();
 
 Route::group(['middleware'=>'auth'],function(){
-	Route::get('/', 'HomeController@index');
-	Route::post('/', 'HomeController@store');
-	Route::get('/create', 'HomeController@create');
+		Route::get('/', function(){
+			return view('welcome');
+		});
+	Route::get('sales/dash', 'HomeController@index')->name('dash');
+	Route::post('sales/dash', 'HomeController@store');
+	Route::get('sales/create', 'HomeController@create')->name('create');
 
 	
 

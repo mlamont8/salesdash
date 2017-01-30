@@ -111,7 +111,7 @@ class HomeController extends Controller
 
     public function create(){
 
-        return view('create');
+        return view('sales.create');
     }
 
     // Update to insert data correctly into database
@@ -124,6 +124,6 @@ class HomeController extends Controller
         $user->sales()->create($dataInput);
 
 
-        return redirect('/');
+        return redirect('dash');
     }
 }
