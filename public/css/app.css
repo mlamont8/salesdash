@@ -7693,6 +7693,14 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+.panel {
+  background-image: url("/images/background.png");
+}
+
+.panel-heading {
+  background-color: #C5CAE9 !important;
+}
+
 a {
   color: #757575;
 }
@@ -7767,14 +7775,21 @@ a {
   text-align: center;
 }
 
-.navbar {
+.navbar,
+.navbar-nav li a {
   background-color: #3F51B5;
-  color: #ffffff;
+  color: #ffffff !important;
   margin-bottom: 0px;
+  font-size: 1.2em;
 }
 
 .navbar-brand {
   color: #ffffff !important;
+  font-size: 1.2em;
+}
+
+.navbar p {
+  padding: 10px 20px 0 0;
 }
 
 /* .highcharts-background

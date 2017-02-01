@@ -76,9 +76,10 @@ class HomeController extends Controller
          
             ->title('Items Sold')
             ->Elementlabel('Totals')
-            ->responsive(true)
             ->groupBy('commission')
             ->groupByMonth('2016',true);
+
+         
 
                      
 
@@ -88,14 +89,16 @@ class HomeController extends Controller
             ->title('Total Sales')
             ->width(0)
             ->groupBy('commission')
-            ->groupByYear(3);
+            ->groupByYear(3)
+            ->colors(["#ff0000","#00ff00","#0000ff"]);
 
          $chart3 = Charts::database($sales,'donut','fusioncharts')
          
             ->responsive(false)
             ->title('Products')
             ->width(0)
-            ->groupBy('product');
+            ->groupBy('product')
+            ->colors(["#ff0000","#00ff00","#0000ff"]);
 
             $data=[$chart1,$chart2,$chart3,$thisMonth,$lastMonth, $thisYear];
 
@@ -125,5 +128,13 @@ class HomeController extends Controller
 
 
         return redirect('dash');
+    }
+
+    public function list(){
+        $user= Auth::user();
+        $sales= $user->sales;
+        $sortedSales= $sales->sortByDesc('date_sold');
+ 
+        return view('sales.list', compact('sortedSales'));
     }
 }

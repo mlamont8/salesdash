@@ -37,10 +37,10 @@
 
               </div>  
                  @if(Auth::user())
-                <ul class="nav navbar-nav navbar-right">
-                     <li>{{Auth::user()->name}}</li>
+                <div class="nav navbar-nav navbar-right">
+                     <p>{{Auth::user()->name}}</p>
                 
-                 </ul>
+                 </div>
 
                  @endif
              
@@ -59,10 +59,11 @@
             <div class="sidebar-name">NAME</div>
             <ul class="sidebar-nav">
                 <li><a href="{{route('dash')}}"><i class="fa fa-tachometer fa-lg"></i>Dashboard</a></li>
+                <li><a href="{{route('list')}}"><i class="fa fa-tachometer fa-lg"></i>Products Sold</a></li>
                 <li><a href="{{route('create')}}">
 <i class="fa fa-usd fa-lg"></i>Enter Sales</a></li>
                 <li><a href="#"> <i class="fa fa-user fa-lg"></i>Profile</a></li>
-                <li><a href="#"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
+                <li><a href="{{route('logout')}}"><i class="fa fa-sign-out fa-lg"></i>Logout</a></li>
             </ul>
 
         </div>

@@ -20,6 +20,8 @@ Route::group(['middleware'=>'auth'],function(){
 	Route::get('sales/dash', 'HomeController@index')->name('dash');
 	Route::post('sales/dash', 'HomeController@store');
 	Route::get('sales/create', 'HomeController@create')->name('create');
+	Route::get('sales/list', 'HomeController@list')->name('list');
+	Route::get('/logout','Auth\LoginController@logout')->name('logout');
 
 	
 

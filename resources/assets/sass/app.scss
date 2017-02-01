@@ -27,10 +27,15 @@ html{
 }
 
 
-// #main-content{
-//   color: $primary-text;
- 
-// }
+.panel{
+  background-image: url('/images/background.png');
+
+}
+
+.panel-heading{
+  background-color: $light-primary !important;
+
+}
 
 a{
   color: $secondary-text;
@@ -89,9 +94,7 @@ a{
   text-decoration: none;
 }
   
-// .sidebar-nav li a:hover{
-//   background-color: #020203;
-// }
+
 .sidebar-name{
   
   padding-left: 20px;
@@ -125,14 +128,22 @@ a{
 
 }
 
-.navbar{
+.navbar, 
+.navbar-nav li a{
   background-color: $primary;
-  color: $white-text;
+  color: $white-text !important;
   margin-bottom: 0px;
+  font-size: 1.2em;
 }
 
 .navbar-brand{
   color: $white-text !important;
+  font-size: 1.2em;
+}
+
+.navbar p{
+  padding: 10px 20px 0 0;
+
 }
 
 /* .highcharts-background
